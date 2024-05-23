@@ -1,8 +1,8 @@
 {
-  "name": "@wiggly-games/files",
+  "name": "@wiggly-games/logs",
   "version": "1.0.0",
   "description": "",
-  "main": "srtc/Files.js",
+  "main": "src/Logs.js",
   "scripts": {
     "compile": "tsc",
     "dev": "npm run compile && npm start",
@@ -15,10 +15,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "fs": "^0.0.1-security"
-  },
   "devDependencies": {
     "@types/node": "^20.12.12"
+  },
+  "dependencies": {
+    "@wiggly-games/files": "^1.0.0"
   }
 }

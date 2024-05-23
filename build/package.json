@@ -1,9 +1,9 @@
 {
-    "name": "@wiggly-games/files",
+    "name": "@wiggly-games/logs",
     "version": "1.0.0",
     "description": "",
-    "main": "Files.js",
-    "types": "Files.d.ts",
+    "main": "Logs.js",
+    "types": "Logs.d.ts",
     "scripts": {
       "start": "node main.js",
       "test": "node test.js"
