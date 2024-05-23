@@ -30,7 +30,7 @@ async function writeLogs(logFile : string, outputType: OutputType, ...data){
     var text = createOutputMessage(outputType, ...data);
 
     if (logsDirectory) {
-        await File.Append(`${logsDirectory}\\${logFile}`, text);
+        await File.Append(`${logsDirectory}\\${logFile}.log`, text);
     } else {
         switch (outputType) {
             case OutputType.Info:
