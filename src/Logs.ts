@@ -19,7 +19,7 @@ function createOutputMessage(type: OutputType, ...data) : string {
     var yearMonthDay = date.toISOString().split('T')[0];
     var time = [date.getHours(), date.getMinutes(), date.getSeconds()].join(":");
     var message = [...data].join(" ");
-    return `${yearMonthDay} - ${time} - ${type.toString()} - ${message}`;
+    return `${yearMonthDay} - ${time} - ${OutputType[type]} - ${message}`;
 }
 
 // Main method for writing to a log file. Takes the local file path (from root of the project) and data to output.
@@ -35,10 +35,13 @@ async function writeLogs(logFile : string, outputType: OutputType, ...data){
         switch (outputType) {
             case OutputType.Info:
                 console.log(text);
+                break;
             case OutputType.Warning:
                 console.warn(text);
+                break;
             case OutputType.Error:
                 console.error(text);
+                break;
         }
     }
 }
