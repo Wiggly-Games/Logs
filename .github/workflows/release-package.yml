@@ -17,7 +17,13 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: https://npm.pkg.github.com/
-      - run: git config --global url."https://${{ secrets.PACKAGE_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
+      - name: Login to GitHub private NPM registry
+        env:
+          CI_ACCESS_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
+        shell: bash
+        run: |
+            npm install -g npm-cli-login
+            npm-cli-login -u "thomas-chabot" -p "${CI_ACCESS_TOKEN}" -e "seanhodges01@hotmail.com" -r "https://npm.pkg.github.com" -s "@thomas-chabot"
       - run: npm ci
       - run: npm run compile
       - run: npm publish
