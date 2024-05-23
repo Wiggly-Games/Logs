@@ -19,6 +19,6 @@
     "@types/node": "^20.12.12"
   },
   "dependencies": {
-    "@wiggly-games/files": "^1.0.0"
+    "@wiggly-games/files": "github:@wiggly-games/files"
   }
 }
