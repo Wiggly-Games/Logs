@@ -1,0 +1,16 @@
+{
+    "name": "@wiggly-games/files",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Files.js",
+    "types": "Files.d.ts",
+    "scripts": {
+      "start": "node main.js",
+      "test": "node test.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+    }
+  }
+  
