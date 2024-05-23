@@ -19,7 +19,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install
         env:
-          NPM_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{secrets.PACKAGE_TOKEN}}
       - run: npm run compile
       - run: npm publish
         working-directory: ./build
